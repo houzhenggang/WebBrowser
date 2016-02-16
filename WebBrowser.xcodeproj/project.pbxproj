@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		0142D7BC1C71A64500EC799A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142D7BB1C71A64500EC799A /* AppDelegate.swift */; };
 		0142D7C11C71A64500EC799A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0142D7BF1C71A64500EC799A /* Main.storyboard */; };
-		0142D7C31C71A64500EC799A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0142D7C21C71A64500EC799A /* Assets.xcassets */; };
 		0142D7C61C71A64500EC799A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0142D7C41C71A64500EC799A /* LaunchScreen.storyboard */; };
 		0142D7D11C71A64500EC799A /* WebBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142D7D01C71A64500EC799A /* WebBrowserTests.swift */; };
 		0142D7DC1C71A64500EC799A /* WebBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142D7DB1C71A64500EC799A /* WebBrowserUITests.swift */; };
 		0142D7F01C71AB8100EC799A /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142D7EF1C71AB8100EC799A /* WebBrowserViewController.swift */; };
+		0148FDBA1C72D13A0091DA93 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 0148FDB71C72D13A0091DA93 /* NJKWebViewProgress.m */; };
+		0148FDBB1C72D13A0091DA93 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0148FDB91C72D13A0091DA93 /* NJKWebViewProgressView.m */; };
+		0148FDC11C72F22B0091DA93 /* Asset Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0148FDC01C72F22B0091DA93 /* Asset Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 		0142D7B81C71A64500EC799A /* WebBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0142D7BB1C71A64500EC799A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0142D7C01C71A64500EC799A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0142D7C21C71A64500EC799A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0142D7C51C71A64500EC799A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0142D7C71C71A64500EC799A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0142D7CC1C71A64500EC799A /* WebBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +48,12 @@
 		0142D7DB1C71A64500EC799A /* WebBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserUITests.swift; sourceTree = "<group>"; };
 		0142D7DD1C71A64500EC799A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0142D7EF1C71AB8100EC799A /* WebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
+		0148FDB61C72D13A0091DA93 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		0148FDB71C72D13A0091DA93 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		0148FDB81C72D13A0091DA93 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		0148FDB91C72D13A0091DA93 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		0148FDBF1C72D2E60091DA93 /* OC_BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OC_BridgingHeader.h; sourceTree = "<group>"; };
+		0148FDC01C72F22B0091DA93 /* Asset Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Asset Images.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +106,9 @@
 			children = (
 				0142D7E91C71AACE00EC799A /* Classes */,
 				0142D7BB1C71A64500EC799A /* AppDelegate.swift */,
+				0148FDBF1C72D2E60091DA93 /* OC_BridgingHeader.h */,
+				0148FDC01C72F22B0091DA93 /* Asset Images.xcassets */,
 				0142D7BF1C71A64500EC799A /* Main.storyboard */,
-				0142D7C21C71A64500EC799A /* Assets.xcassets */,
 				0142D7C41C71A64500EC799A /* LaunchScreen.storyboard */,
 				0142D7C71C71A64500EC799A /* Info.plist */,
 			);
@@ -162,6 +170,7 @@
 		0142D7ED1C71AAFF00EC799A /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				0148FDB51C72D13A0091DA93 /* NJKWebViewProgress */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -171,6 +180,17 @@
 			children = (
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		0148FDB51C72D13A0091DA93 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				0148FDB61C72D13A0091DA93 /* NJKWebViewProgress.h */,
+				0148FDB71C72D13A0091DA93 /* NJKWebViewProgress.m */,
+				0148FDB81C72D13A0091DA93 /* NJKWebViewProgressView.h */,
+				0148FDB91C72D13A0091DA93 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0142D7C61C71A64500EC799A /* LaunchScreen.storyboard in Resources */,
-				0142D7C31C71A64500EC799A /* Assets.xcassets in Resources */,
+				0148FDC11C72F22B0091DA93 /* Asset Images.xcassets in Resources */,
 				0142D7C11C71A64500EC799A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0142D7F01C71AB8100EC799A /* WebBrowserViewController.swift in Sources */,
+				0148FDBA1C72D13A0091DA93 /* NJKWebViewProgress.m in Sources */,
 				0142D7BC1C71A64500EC799A /* AppDelegate.swift in Sources */,
+				0148FDBB1C72D13A0091DA93 /* NJKWebViewProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kkguan.WebBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "77ce368e-2206-49a9-9fb9-fe394c0e4e73";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WebBrowser/OC_BridgingHeader.h";
 			};
 			name = Debug;
 		};
@@ -467,6 +490,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kkguan.WebBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "77ce368e-2206-49a9-9fb9-fe394c0e4e73";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WebBrowser/OC_BridgingHeader.h";
 			};
 			name = Release;
 		};
