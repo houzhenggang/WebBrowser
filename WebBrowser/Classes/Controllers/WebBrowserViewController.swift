@@ -43,8 +43,10 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
     func loadWebSiteFromURL() -> Void {
         // 创建请求
         let requestUrl = NSURL(string: self.webUrl!)
-        let webRequest = NSURLRequest(URL: requestUrl!)
-        myWebView.loadRequest(webRequest)
+        if let url = requestUrl {
+            let webRequest = NSURLRequest(URL: url)
+            myWebView.loadRequest(webRequest)
+        }
     }
     
     @IBAction func goBackAction(sender: AnyObject) {
