@@ -7,6 +7,12 @@
 
 #import "NJKWebViewProgressView.h"
 
+@interface NJKWebViewProgressView ()
+
+@property (nonatomic, strong) UIColor * progressColor;
+
+@end
+
 @implementation NJKWebViewProgressView
 
 - (id)initWithFrame:(CGRect)frame
@@ -24,17 +30,28 @@
     [self configureViews];
 }
 
+// add by X.R
+- (void)setProgressBackColor:(UIColor *)progressColor
+{
+    self.progressColor = progressColor;
+    _progressBarView.backgroundColor = self.progressColor;
+}
+
+// modify by X.R
 -(void)configureViews
 {
     self.userInteractionEnabled = NO;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _progressBarView = [[UIView alloc] initWithFrame:self.bounds];
     _progressBarView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    // 设置默认进度条颜色
     UIColor *tintColor = [UIColor colorWithRed:22.f / 255.f green:126.f / 255.f blue:251.f / 255.f alpha:1.0]; // iOS7 Safari bar color
     if ([UIApplication.sharedApplication.delegate.window respondsToSelector:@selector(setTintColor:)] && UIApplication.sharedApplication.delegate.window.tintColor) {
         tintColor = UIApplication.sharedApplication.delegate.window.tintColor;
     }
-    _progressBarView.backgroundColor = tintColor;
+    
+    self.progressColor = tintColor;
+    _progressBarView.backgroundColor = self.progressColor;
     [self addSubview:_progressBarView];
     
     _barAnimationDuration = 0.27f;

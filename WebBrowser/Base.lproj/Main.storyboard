@@ -29,7 +29,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrq-2M-X0T">
                                 <rect key="frame" x="80" y="627" width="80" height="40"/>
-                                <state key="normal" title="停止"/>
+                                <state key="normal" title="停止加载"/>
                                 <connections>
                                     <action selector="stopAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="ucy-Uz-27P"/>
                                 </connections>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7O-JO-AHP">
-                                <rect key="frame" x="10" y="25" width="313" height="30"/>
+                                <rect key="frame" x="10" y="25" width="312" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -82,7 +82,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92940705128205126" green="0.92940705128205126" blue="0.92940705128205126" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qrq-2M-X0T" firstAttribute="width" secondItem="M5z-nT-yA7" secondAttribute="width" id="05D-bu-4yJ"/>
                             <constraint firstItem="XD4-cr-q9D" firstAttribute="top" secondItem="l7O-JO-AHP" secondAttribute="bottom" constant="5" id="10C-Cc-Qg7"/>
@@ -90,7 +90,7 @@
                             <constraint firstItem="GOd-Dy-x82" firstAttribute="width" secondItem="qrq-2M-X0T" secondAttribute="width" id="41Y-35-Fez"/>
                             <constraint firstAttribute="trailing" secondItem="xVL-lU-xEF" secondAttribute="trailing" id="4nt-kd-aH3"/>
                             <constraint firstAttribute="trailing" secondItem="hO1-5q-5xx" secondAttribute="trailing" constant="10" id="5MI-pX-pVo"/>
-                            <constraint firstItem="hO1-5q-5xx" firstAttribute="leading" secondItem="l7O-JO-AHP" secondAttribute="trailing" constant="2" id="6wl-Ka-bIG"/>
+                            <constraint firstItem="hO1-5q-5xx" firstAttribute="leading" secondItem="l7O-JO-AHP" secondAttribute="trailing" constant="3" id="6wl-Ka-bIG"/>
                             <constraint firstItem="l7O-JO-AHP" firstAttribute="leading" secondItem="U4n-aD-6uH" secondAttribute="leading" constant="10" id="8nO-Ni-fAA"/>
                             <constraint firstItem="cyI-24-wmc" firstAttribute="top" secondItem="M5z-nT-yA7" secondAttribute="bottom" id="CPx-uG-whu"/>
                             <constraint firstItem="xVL-lU-xEF" firstAttribute="top" secondItem="l7O-JO-AHP" secondAttribute="bottom" constant="2" id="DLb-o7-eTw"/>
@@ -127,6 +127,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="search" width="40" height="40"/>
+        <image name="search" width="30" height="30"/>
     </resources>
 </document>

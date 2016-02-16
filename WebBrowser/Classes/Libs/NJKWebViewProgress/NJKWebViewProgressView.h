@@ -16,6 +16,12 @@
 @property (nonatomic) NSTimeInterval fadeAnimationDuration; // default 0.27
 @property (nonatomic) NSTimeInterval fadeOutDelay; // default 0.1
 
+/**
+ *  新增设置进度条颜色的接口
+ *  add by X.R
+ */
+- (void)setProgressBackColor:(UIColor *)progressColor;
+
 - (void)setProgress:(float)progress animated:(BOOL)animated;
 
 @end

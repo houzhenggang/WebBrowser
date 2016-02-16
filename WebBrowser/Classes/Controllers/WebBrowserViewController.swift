@@ -12,7 +12,15 @@
 
 import UIKit
 
-class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertViewDelegate, NJKWebViewProgressDelegate {
+// let 定义常量代替宏定义
+let defaultWebURL = "http://m.hao123.com"
+
+// RGBA 宏 使用全局函数代替
+func RGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
+    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
+}
+
+class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertViewDelegate, NJKWebViewProgressDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var btnWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var myWebView: UIWebView!
@@ -27,7 +35,7 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
         myWebView.backgroundColor = UIColor.clearColor()
         myWebView.scalesPageToFit = true
         myWebView.delegate = self
-        self.webUrl = "http://m.hao123.com" // 默认首页网址
+        self.webUrl = defaultWebURL // 默认首页网址
     }
     
     // 加载网页
@@ -63,6 +71,7 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = RGBA(240.0, g: 240.0, b: 240.0, a: 1.0)
         self.initialWebView()
         self.btnWidthConstraint.constant = UIScreen.mainScreen().bounds.size.width / 4.0
         let attributesStr = NSAttributedString(string: "请输入您要访问的网址", attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
@@ -70,15 +79,18 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
         self.searchTextField.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
         self.searchTextField.textAlignment = NSTextAlignment.Center
         self.searchTextField.textColor = UIColor.whiteColor()
+        self.searchTextField.delegate = self
+        
         self.loadWebSiteFromURL()
         // 初始化加载进度条
         self.progressProxy = NJKWebViewProgress()
         self.myWebView.delegate = self.progressProxy
         self.progressProxy?.webViewProxyDelegate = self
         self.progressProxy?.progressDelegate = self
+        self.progressView.setProgressBackColor(UIColor.redColor())
     }
     
-    @IBAction func gotoWebSiteAction(sender: AnyObject) {
+    func goWebSiteWithURL() -> Void {
         self.webUrl = self.searchTextField.text
         
         // 判断webURL是否合法
@@ -104,6 +116,10 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
         }
     }
     
+    @IBAction func gotoWebSiteAction(sender: AnyObject) {
+        self.goWebSiteWithURL()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -124,12 +140,20 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-        print("加载遇到错误: \(error?.localizedFailureReason)")
+//        print("加载遇到错误: \(error?.localizedFailureReason)")
     }
     
     // MARK: NJKWebViewProgressDelegate
     func webViewProgress(webViewProgress: NJKWebViewProgress!, updateProgress progress: Float) {
         self.progressView.setProgress(progress, animated: true)
+    }
+    
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.goWebSiteWithURL()
+        self.loadWebSiteFromURL()
+        
+        return true
     }
 }
 
