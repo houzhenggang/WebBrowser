@@ -105,7 +105,8 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
+      customArchiveName = "&#x91ce;&#x706b;&#x6d4f;&#x89c8;&#x5668;"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
