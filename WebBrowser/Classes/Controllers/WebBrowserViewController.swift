@@ -8,6 +8,7 @@
 
 /**
  *  WebView实现简易浏览器
+ *  by X.R
  */
 
 import UIKit
@@ -68,12 +69,17 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
         }
     }
     
+    @IBAction func goHomeSiteAction(sender: AnyObject) {
+        self.webUrl = defaultWebURL
+        self.loadWebSiteFromURL()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = RGBA(240.0, g: 240.0, b: 240.0, a: 1.0)
+        self.view.backgroundColor = RGBA(250.0, g: 250.0, b: 250.0, a: 1.0)
         self.initialWebView()
-        self.btnWidthConstraint.constant = UIScreen.mainScreen().bounds.size.width / 4.0
+        self.btnWidthConstraint.constant = UIScreen.mainScreen().bounds.size.width / 5.0
         let attributesStr = NSAttributedString(string: "请输入您要访问的网址", attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
         self.searchTextField.attributedPlaceholder = attributesStr
         self.searchTextField.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)

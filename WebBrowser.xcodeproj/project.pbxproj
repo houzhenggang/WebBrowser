@@ -474,7 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kkguan.WebBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "77ce368e-2206-49a9-9fb9-fe394c0e4e73";
+				PROVISIONING_PROFILE = "12f92a44-7189-4a03-918d-66e2af77b6f1";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WebBrowser/OC_BridgingHeader.h";
 			};
 			name = Debug;
@@ -489,7 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kkguan.WebBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "77ce368e-2206-49a9-9fb9-fe394c0e4e73";
+				PROVISIONING_PROFILE = "12f92a44-7189-4a03-918d-66e2af77b6f1";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/WebBrowser/OC_BridgingHeader.h";
 			};
 			name = Release;

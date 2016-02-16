@@ -14,46 +14,39 @@
                         <viewControllerLayoutGuide type="bottom" id="cyI-24-wmc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U4n-aD-6uH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5z-nT-yA7">
-                                <rect key="frame" x="0.0" y="627" width="80" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5z-nT-yA7" userLabel="goBackBtn">
+                                <rect key="frame" x="0.0" y="440" width="64" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="gW2-7T-4h6"/>
+                                    <constraint firstAttribute="width" constant="64" id="gW2-7T-4h6"/>
                                 </constraints>
-                                <state key="normal" title="上一页"/>
+                                <state key="normal" image="icon-tool-backward"/>
                                 <connections>
                                     <action selector="goBackAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="3nP-hR-EP2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrq-2M-X0T">
-                                <rect key="frame" x="80" y="627" width="80" height="40"/>
-                                <state key="normal" title="停止加载"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrq-2M-X0T" userLabel="forwardBtn">
+                                <rect key="frame" x="64" y="440" width="64" height="40"/>
+                                <state key="normal" image="icon-tool-forward"/>
                                 <connections>
-                                    <action selector="stopAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="ucy-Uz-27P"/>
+                                    <action selector="goForWardAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="F6X-TA-BVN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOd-Dy-x82">
-                                <rect key="frame" x="160" y="627" width="80" height="40"/>
-                                <state key="normal" title="重新加载"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOd-Dy-x82" userLabel="reloadBtn">
+                                <rect key="frame" x="192" y="440" width="64" height="40"/>
+                                <state key="normal" image="icon-tool-reload"/>
                                 <connections>
                                     <action selector="reloadAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="hAB-IP-8QF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4p-CE-drW">
-                                <rect key="frame" x="240" y="627" width="80" height="40"/>
-                                <state key="normal" title="下一页"/>
-                                <connections>
-                                    <action selector="goForWardAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="I9G-F1-mgP"/>
-                                </connections>
-                            </button>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XD4-cr-q9D">
-                                <rect key="frame" x="0.0" y="60" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="60" width="320" height="380"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hO1-5q-5xx">
-                                <rect key="frame" x="325" y="20" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hO1-5q-5xx" userLabel="searchBtn">
+                                <rect key="frame" x="270" y="20" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="U9i-Qg-XBL"/>
                                     <constraint firstAttribute="width" constant="40" id="cwY-7Q-4d1"/>
@@ -64,7 +57,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l7O-JO-AHP">
-                                <rect key="frame" x="10" y="25" width="312" height="30"/>
+                                <rect key="frame" x="10" y="25" width="257" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -75,14 +68,28 @@
                                 <textInputTraits key="textInputTraits" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVL-lU-xEF" customClass="NJKWebViewProgressView">
-                                <rect key="frame" x="0.0" y="57" width="375" height="2"/>
+                                <rect key="frame" x="0.0" y="57" width="320" height="2"/>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.83529411764705885" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="nOF-jL-R8T"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGe-Be-SEf" userLabel="homeBtn">
+                                <rect key="frame" x="128" y="440" width="64" height="40"/>
+                                <state key="normal" image="icon-tool-home"/>
+                                <connections>
+                                    <action selector="goHomeSiteAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="czO-Op-6uE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4p-CE-drW" userLabel="stopBtn">
+                                <rect key="frame" x="256" y="440" width="64" height="40"/>
+                                <state key="normal" image="icon-tool-stop"/>
+                                <connections>
+                                    <action selector="stopAction:" destination="BBr-5g-VNy" eventType="touchUpInside" id="wbC-eg-vuV"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.92940705128205126" green="0.92940705128205126" blue="0.92940705128205126" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qrq-2M-X0T" firstAttribute="width" secondItem="M5z-nT-yA7" secondAttribute="width" id="05D-bu-4yJ"/>
                             <constraint firstItem="XD4-cr-q9D" firstAttribute="top" secondItem="l7O-JO-AHP" secondAttribute="bottom" constant="5" id="10C-Cc-Qg7"/>
@@ -98,22 +105,26 @@
                             <constraint firstItem="M5z-nT-yA7" firstAttribute="top" secondItem="XD4-cr-q9D" secondAttribute="bottom" id="DyN-1o-6G6"/>
                             <constraint firstItem="hO1-5q-5xx" firstAttribute="centerY" secondItem="l7O-JO-AHP" secondAttribute="centerY" id="Gjw-vx-3uJ"/>
                             <constraint firstItem="H4p-CE-drW" firstAttribute="centerY" secondItem="GOd-Dy-x82" secondAttribute="centerY" id="HI6-x1-VWX"/>
-                            <constraint firstItem="GOd-Dy-x82" firstAttribute="leading" secondItem="qrq-2M-X0T" secondAttribute="trailing" id="Lrs-Rz-qMh"/>
+                            <constraint firstItem="BGe-Be-SEf" firstAttribute="width" secondItem="M5z-nT-yA7" secondAttribute="width" id="JEN-zg-LnS"/>
                             <constraint firstItem="H4p-CE-drW" firstAttribute="leading" secondItem="GOd-Dy-x82" secondAttribute="trailing" id="Nht-7k-Faq"/>
+                            <constraint firstItem="BGe-Be-SEf" firstAttribute="leading" secondItem="qrq-2M-X0T" secondAttribute="trailing" id="OTz-91-qQG"/>
                             <constraint firstItem="M5z-nT-yA7" firstAttribute="leading" secondItem="U4n-aD-6uH" secondAttribute="leading" id="Ril-th-8fP"/>
                             <constraint firstItem="H4p-CE-drW" firstAttribute="height" secondItem="GOd-Dy-x82" secondAttribute="height" id="Sih-St-1JM"/>
                             <constraint firstItem="l7O-JO-AHP" firstAttribute="top" secondItem="U4n-aD-6uH" secondAttribute="top" constant="25" id="TQ4-n7-puH"/>
                             <constraint firstItem="qrq-2M-X0T" firstAttribute="leading" secondItem="M5z-nT-yA7" secondAttribute="trailing" id="ba3-ii-mYI"/>
                             <constraint firstItem="GOd-Dy-x82" firstAttribute="height" secondItem="qrq-2M-X0T" secondAttribute="height" id="iQZ-bc-eFV"/>
+                            <constraint firstItem="GOd-Dy-x82" firstAttribute="leading" secondItem="BGe-Be-SEf" secondAttribute="trailing" id="kZA-hC-Vbs"/>
+                            <constraint firstItem="BGe-Be-SEf" firstAttribute="centerY" secondItem="M5z-nT-yA7" secondAttribute="centerY" id="m3D-Np-gw7"/>
                             <constraint firstItem="XD4-cr-q9D" firstAttribute="leading" secondItem="U4n-aD-6uH" secondAttribute="leading" id="n8z-Nv-ypb"/>
                             <constraint firstItem="xVL-lU-xEF" firstAttribute="leading" secondItem="U4n-aD-6uH" secondAttribute="leading" id="nTj-Ap-WkP"/>
                             <constraint firstItem="qrq-2M-X0T" firstAttribute="centerY" secondItem="M5z-nT-yA7" secondAttribute="centerY" id="oYn-Rw-62d"/>
                             <constraint firstItem="qrq-2M-X0T" firstAttribute="height" secondItem="M5z-nT-yA7" secondAttribute="height" id="sHl-W1-Okw"/>
                             <constraint firstItem="H4p-CE-drW" firstAttribute="width" secondItem="GOd-Dy-x82" secondAttribute="width" id="szh-co-dbc"/>
+                            <constraint firstItem="BGe-Be-SEf" firstAttribute="height" secondItem="M5z-nT-yA7" secondAttribute="height" id="uzk-IO-ndj"/>
                             <constraint firstItem="cyI-24-wmc" firstAttribute="top" secondItem="XD4-cr-q9D" secondAttribute="bottom" constant="40" id="wgI-d6-cXW"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="btnWidthConstraint" destination="gW2-7T-4h6" id="gL9-zt-ycz"/>
                         <outlet property="myWebView" destination="XD4-cr-q9D" id="XPQ-Wh-Ozj"/>
@@ -123,10 +134,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K03-ab-dBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.5" y="153.5"/>
+            <point key="canvasLocation" x="62" y="134"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon-tool-backward" width="35" height="35"/>
+        <image name="icon-tool-forward" width="35" height="35"/>
+        <image name="icon-tool-home" width="35" height="35"/>
+        <image name="icon-tool-reload" width="35" height="35"/>
+        <image name="icon-tool-stop" width="35" height="35"/>
         <image name="search" width="30" height="30"/>
     </resources>
 </document>
