@@ -44,7 +44,12 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
         // 创建请求
         let requestUrl = NSURL(string: self.webUrl!)
         if let url = requestUrl {
-            let webRequest = NSURLRequest(URL: url)
+            let webRequest = NSMutableURLRequest(URL: url, cachePolicy: NSURLRequestCachePolicy.ReloadRevalidatingCacheData, timeoutInterval: 30.0)
+            
+            // 自定义UA UA格式： appname-系统-版本
+            let customUA = "WebBrowser-iOS-1.0"
+            webRequest.setValue(customUA, forHTTPHeaderField: "User-Agent")
+            
             myWebView.loadRequest(webRequest)
         }
     }
@@ -145,6 +150,17 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
+        let UAStr = webView.stringByEvaluatingJavaScriptFromString("navigator.userAgent")
+        if let UA = UAStr {
+            print("UA: \(UA)")
+        }
+        
+        // 打印cookie
+//        let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+//        let tempArr = cookieStorage.cookies! as NSArray
+//        for var cookie in tempArr {
+//            print("cookie: \(cookie)")
+//        }
     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
