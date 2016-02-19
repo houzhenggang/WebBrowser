@@ -27,6 +27,7 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
     @IBOutlet weak var myWebView: UIWebView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var progressView: NJKWebViewProgressView!
+    var activityIndicatorView: UIActivityIndicatorView?
     
     var webUrl: String?
     var progressProxy: NJKWebViewProgress?
@@ -81,10 +82,21 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
         self.loadWebSiteFromURL()
     }
     
+    func setupActivityIncatorView() {
+        self.activityIndicatorView = UIActivityIndicatorView()
+        self.activityIndicatorView?.frame = CGRectMake(0, 0, 60, 60)
+        self.activityIndicatorView?.activityIndicatorViewStyle = .Gray
+        self.activityIndicatorView?.center = self.view.center
+        self.view.addSubview(self.activityIndicatorView!)
+        self.activityIndicatorView?.startAnimating()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = RGBA(250.0, g: 250.0, b: 250.0, a: 1.0)
+        
+        self.setupActivityIncatorView()
         self.initialWebView()
         self.btnWidthConstraint.constant = UIScreen.mainScreen().bounds.size.width / 5.0
         let attributesStr = NSAttributedString(string: "请输入您要访问的网址", attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
@@ -140,6 +152,7 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
     
     // MARK: UIWebViewDelegate
     func webViewDidStartLoad(webView: UIWebView) {
+        self.activityIndicatorView?.startAnimating()
         self.webUrl = webView.request?.URL?.absoluteString
         // 显示URL
         if self.webUrl == "http://" || self.webUrl == "https://" {
@@ -150,21 +163,13 @@ class WebBrowserViewController: UIViewController, UIWebViewDelegate, UIAlertView
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
-        let UAStr = webView.stringByEvaluatingJavaScriptFromString("navigator.userAgent")
-        if let UA = UAStr {
-            print("UA: \(UA)")
+        if let _ = self.activityIndicatorView?.isAnimating() {
+            self.activityIndicatorView?.stopAnimating()
         }
-        
-        // 打印cookie
-//        let cookieStorage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
-//        let tempArr = cookieStorage.cookies! as NSArray
-//        for var cookie in tempArr {
-//            print("cookie: \(cookie)")
-//        }
     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-//        print("加载遇到错误: \(error?.localizedFailureReason)")
+        
     }
     
     // MARK: NJKWebViewProgressDelegate
