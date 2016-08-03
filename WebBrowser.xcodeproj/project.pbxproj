@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011116011D4F558F005C95A2 /* WebCacheURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011116001D4F558F005C95A2 /* WebCacheURLProtocol.swift */; };
+		01208CD71D4F471900E323D0 /* WebBrowser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01208CD51D4F471900E323D0 /* WebBrowser.xcdatamodeld */; };
+		01208CDA1D4F481D00E323D0 /* WebCache+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01208CD81D4F481D00E323D0 /* WebCache+CoreDataProperties.swift */; };
+		01208CDB1D4F481D00E323D0 /* WebCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01208CD91D4F481D00E323D0 /* WebCache.swift */; };
 		0142D7BC1C71A64500EC799A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142D7BB1C71A64500EC799A /* AppDelegate.swift */; };
 		0142D7C11C71A64500EC799A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0142D7BF1C71A64500EC799A /* Main.storyboard */; };
 		0142D7C61C71A64500EC799A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0142D7C41C71A64500EC799A /* LaunchScreen.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011116001D4F558F005C95A2 /* WebCacheURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebCacheURLProtocol.swift; sourceTree = "<group>"; };
+		01208CD61D4F471900E323D0 /* WebBrowser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WebBrowser.xcdatamodel; sourceTree = "<group>"; };
+		01208CD81D4F481D00E323D0 /* WebCache+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WebCache+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		01208CD91D4F481D00E323D0 /* WebCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebCache.swift; sourceTree = "<group>"; };
 		0142D7B81C71A64500EC799A /* WebBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0142D7BB1C71A64500EC799A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0142D7C01C71A64500EC799A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +164,10 @@
 			isa = PBXGroup;
 			children = (
 				0142D7EF1C71AB8100EC799A /* WebBrowserViewController.swift */,
+				01208CD51D4F471900E323D0 /* WebBrowser.xcdatamodeld */,
+				01208CD81D4F481D00E323D0 /* WebCache+CoreDataProperties.swift */,
+				01208CD91D4F481D00E323D0 /* WebCache.swift */,
+				011116001D4F558F005C95A2 /* WebCacheURLProtocol.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,7 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0142D7F01C71AB8100EC799A /* WebBrowserViewController.swift in Sources */,
+				01208CDB1D4F481D00E323D0 /* WebCache.swift in Sources */,
+				01208CDA1D4F481D00E323D0 /* WebCache+CoreDataProperties.swift in Sources */,
+				011116011D4F558F005C95A2 /* WebCacheURLProtocol.swift in Sources */,
 				0148FDBA1C72D13A0091DA93 /* NJKWebViewProgress.m in Sources */,
+				01208CD71D4F471900E323D0 /* WebBrowser.xcdatamodeld in Sources */,
 				0142D7BC1C71A64500EC799A /* AppDelegate.swift in Sources */,
 				0148FDBB1C72D13A0091DA93 /* NJKWebViewProgressView.m in Sources */,
 			);
@@ -582,6 +598,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		01208CD51D4F471900E323D0 /* WebBrowser.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				01208CD61D4F471900E323D0 /* WebBrowser.xcdatamodel */,
+			);
+			currentVersion = 01208CD61D4F471900E323D0 /* WebBrowser.xcdatamodel */;
+			path = WebBrowser.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0142D7B01C71A64500EC799A /* Project object */;
 }

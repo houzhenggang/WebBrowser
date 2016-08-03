@@ -14,7 +14,7 @@
 import UIKit
 
 // let 定义常量代替宏定义
-let defaultWebURL = "http://m.hao123.com"
+let defaultWebURL = "http://m.baidu.com"
 
 // RGBA 宏 使用全局函数代替
 func RGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
